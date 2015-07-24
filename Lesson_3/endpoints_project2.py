@@ -11,7 +11,9 @@ def PuppiesFunction():
 #Make another app.route() decorator here that takes in an integer id in the URI
 def PuppiesFunction(id):
   if request.method == 'UPDATE'
+  #Call the method to update a puppy
   elif request.method == 'DELETE'
+  #Call the method to remove a puppy 
 
 
 def GetAllPuppies():
