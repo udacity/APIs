@@ -1,18 +1,20 @@
+from flask import Flask
+app = Flask(__name__)
 # Create the appropriate app.route functions, test and see if they work, and paste your URI’s in the boxes below.f
 
 #Make an app.route() decorator here
 def PuppiesFunction():
-  if request.method == 'GET'
+  if request.method == 'GET':
   #Call the method to Get all of the puppies
-  elif request.method == 'POST'
+  elif request.method == 'POST':
   #Call the method to make a new puppy
   
  
 #Make another app.route() decorator here that takes in an integer id in the URI
 def PuppiesFunction(id):
-  if request.method == 'UPDATE'
+  if request.method == 'PUT':
   #Call the method to update a puppy
-  elif request.method == 'DELETE'
+  elif request.method == 'DELETE':
   #Call the method to remove a puppy 
 
 
