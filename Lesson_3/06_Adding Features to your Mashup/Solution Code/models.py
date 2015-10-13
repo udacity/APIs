@@ -1,7 +1,12 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Float, Boolean, or_
+# -*- coding: utf-8 -*-
+from sqlalchemy import Column,Integer,String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
+
+
+
+
 
 Base = declarative_base()
 class Restaurant(Base):
@@ -19,6 +24,7 @@ class Restaurant(Base):
       'restaurant_name': self.restaurant_name,
       'restaurant_address': self.restaurant_address,
       'restaurant_image' : self.restaurant_image,
+      'id' : self.id
       
       }
 
