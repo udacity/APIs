@@ -1,0 +1,145 @@
+<html>
+<head>
+
+  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+
+<script src="https://apis.google.com/js/platform.js?onload=start"> </script>
+<!--meta name="google-signin-client_id" content="13140951618-15nik769cellkubaqnjk5facdib2dh4d.apps.googleusercontent.com"-->
+
+<script>
+    gapi.load('auth2', function() {
+      auth2 = gapi.auth2.init({
+        client_id: '950296359546-tr6a0qci8smluvackvmj51bruuu73qos.apps.googleusercontent.com',
+        // Scopes to request in addition to 'profile' and 'email'
+        //scope: 'additional_scope'
+      });
+    });
+  </script>
+
+
+<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
+</head>
+
+
+<body>
+  <div class="row banner menu">
+    <div class="col-md-11 col-md-offset-1 padding-none">
+      <h1>Login with OAuth 2.0 </h1>
+
+    </div>
+  </div>
+
+
+
+
+<div id="result"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--NEW GOOGLE SIGN IN BUTTON -->
+<h2>There's a new Google Sign-In Option!!</h2>
+
+ 
+  
+<button  class="g-signin2" id="signinButton">Sign in with Google</button>
+<!-- Add where you want your sign-in button to render -->
+<!-- Use an image that follows the branding guidelines in a real app -->
+
+<script>
+  $('#signinButton').click(function() {
+    
+        
+    auth2.grantOfflineAccess({'redirect_uri': 'postmessage'}).then(signInCallback);
+
+  });
+</script>
+</div>
+
+<!--END NEW GOOGLE BUTTON -->
+
+
+
+<!--NEW GOOGLE SIGN IN CODE -->
+<script>
+function signInCallback(json) {
+  console.log('inside callback fuction');
+  console.log(json);
+  // authResult = JSON.parse(json);
+  authResult = json;
+  if (authResult['code']) {
+    // Hide the sign-in button now that the user is authorized, for example:
+    $('#signinButton').attr('style', 'display: none');
+      $('#result').html('One-Time Auth Code:</br>'+ authResult['code'] + '')
+    // Send the code to the server
+    /*$.ajax({
+      type: 'POST',
+      url: '/oauth/google',
+      processData: false,
+      data: authResult['code'],
+      contentType: 'application/octet-stream; charset=utf-8',
+      success: function(result) {
+        // Handle or verify the server response if necessary.
+        if (result) {
+          $('#result').html('Login Successful!</br>'+ result + '')
+        } else if (authResult['error']) {
+          console.log('There was an error: ' + authResult['error']);
+        } else {
+          $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+        }
+      }
+    }); */
+  }
+}
+</script>
+
+
+<!--a href='#' onclick="signOut();">Sign Out from Google <a/>
+<!--script>
+    var auth2;
+
+    gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init();
+    });
+
+    function onSignIn() {
+        var profile = auth2.currentUser.get().getBasicProfile();
+        console.log('User logged in.');
+        console.log('ID:', profile.getId());
+        console.log('Name:', profile.getName());
+        console.log('Image URL:', profile.getImageUrl());
+        console.log('Email:', profile.getEmail());
+    } -->
+<!--script>
+    function signOut() {
+        auth2.signOut().then(function() {
+            console.log('User signed out.');
+        });
+    }
+    </script>
+
+
+<!--END GOOGLE SIGN IN CODE -->
+
+
+
+
+
+
+  </body>
+
+
