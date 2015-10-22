@@ -1,7 +1,7 @@
 import httplib2
 import json
 
-def GetGeocodeLocation(inputString):
+def getGeocodeLocation(inputString):
     # Use Google Maps to convert a location into Latitute/Longitute coordinates
     # FORMAT: https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=API_KEY
     # Then Store it in the DB
