@@ -1,22 +1,28 @@
-foursquare_client_id = "YOUR_ID"
-foursquare_client_secret = "YOUR_SECRET"
+from geocode import getGeocodeLocation
+import json
+import httplib2
+
+import sys
+import codecs
+sys.stdout = codecs.getwriter('utf8')(sys.stdout)
+sys.stderr = codecs.getwriter('utf8')(sys.stderr)
+
+foursquare_client_id = "PASTE_YOUR_ID_HERE"
+foursquare_client_secret = "YOUR_SECRET_HERE"
 
 
-def FindARestaurant(latitude, longitude, mealType):
-	#Use foursquare API to find a nearby restaurant and return the results
-	#https://api.foursquare.com/v2/venues/search?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20130815&ll=40.7,-74&query=sushi
-	url = ('https://api.foursquare.com/v2/venues/search?client_id=%s&client_secret=%s&v=20130815&ll=%s,%s&query=%s' % (foursquare_client_id, foursquare_client_secret,latitude,longitude,mealType))
-	h = httplib2.Http()
-	result = json.loads(h.request(url,'GET')[1])
+def FindARestaurant(mealType,location):
+	#1. Use getGeocodeLocation to get the latitude and longitude coordinates of the location string.
+	
+	#2.  Use foursquare API to find a nearby restaurant with the latitude, longitude, and mealType strings.
+	#HINT: format for url will be something like https://api.foursquare.com/v2/venues/search?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20130815&ll=40.7,-74&query=sushi
+	
 
 
 	#Grab the first restaurant
 	
 	#Get a  300x300 picture of the restaurant using the venue_id (you can change this by altering the 300x300 value in the URL or replacing it with 'orginal' to get the original picture
-  #Grab the first image
-  #if no image available, insert default image url
+	  #Grab the first image
+	  #if no image available, insert default image url
+	#return a dictionary containing the restaurant name, address, and image url	
 	
-
-	restaurantInfo = [{'name':restaurant_name, 'address':restaurant_address, 'image':imageURL}]
-
-	return restaurantInfo
