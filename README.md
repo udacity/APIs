@@ -8,18 +8,18 @@ This course uses the Google Maps and Foursquare APIs. You will need to create de
 
 ##Python Libraries
 The code in this repository assumes the following python libraries are installed:
-*Flask
-*SQLAlchemy
-*httplib
-*requests
-*oauth2client
-*redis
-*passlib
-*itsdangerous
-*flask-httpauth
+* Flask
+* SQLAlchemy
+* httplib
+* requests
+* oauth2client
+* redis
+* passlib
+* itsdangerous
+* flask-httpauth
 
 ##Installing Redis
-  wget http://download.redis.io/redis-stable.tar.gz
-  tar xvzf redis-stable.tar.gz
-  cd redis-stable
-  make install
+      wget http://download.redis.io/redis-stable.tar.gz
+      tar xvzf redis-stable.tar.gz
+      cd redis-stable
+      make install
