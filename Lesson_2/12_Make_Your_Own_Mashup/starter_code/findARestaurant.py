@@ -11,7 +11,7 @@ foursquare_client_id = "PASTE_YOUR_ID_HERE"
 foursquare_client_secret = "YOUR_SECRET_HERE"
 
 
-def FindARestaurant(mealType,location):
+def findARestaurant(mealType,location):
 	#1. Use getGeocodeLocation to get the latitude and longitude coordinates of the location string.
 	
 	#2.  Use foursquare API to find a nearby restaurant with the latitude, longitude, and mealType strings.
@@ -25,4 +25,13 @@ def FindARestaurant(mealType,location):
 	  #Grab the first image
 	  #if no image available, insert default image url
 	#return a dictionary containing the restaurant name, address, and image url	
-	
+if __name__ == '__main__':
+	findARestaurant("Pizza", "Tokyo, Japan")
+	findARestaurant("Tacos", "Jakarta, Indonesia")
+	findARestaurant("Tapas", "Maputo, Mozambique")
+	findARestaurant("Falafel", "Cairo, Egypt")
+	findARestaurant("Spaghetti", "New Delhi, India")
+	findARestaurant("Cappuccino", "Geneva, Switzerland")
+	findARestaurant("Sushi", "Los Angeles, California")
+	findARestaurant("Steak", "La Paz, Bolivia")
+	findARestaurant("Gyros", "Sydney Australia")
