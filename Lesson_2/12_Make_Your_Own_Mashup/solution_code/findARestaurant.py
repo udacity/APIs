@@ -7,8 +7,8 @@ import codecs
 sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 sys.stderr = codecs.getwriter('utf8')(sys.stderr)
 
-foursquare_client_id = "PASTE_YOUR_ID_HERE"
-foursquare_client_secret = "YOUR_SECRET_HERE"
+foursquare_client_id = "SMQNYZFVCIOYIRAIXND2D5SYBLQUOPDB4HZTV13TT22AGACD"
+foursquare_client_secret = "IHBS4VBHYWJL53NLIY2HSVI5A1144GJ3MDTYYY1KLKTMC4BV"
 
 
 def findARestaurant(mealType,location):
@@ -43,7 +43,7 @@ def findARestaurant(mealType,location):
 			#6.  if no image available, insert default image url
 			imageURL = "http://pixabay.com/get/8926af5eb597ca51ca4c/1433440765/cheeseburger-34314_1280.png?direct"
 		#7.  return a dictionary containing the restaurant name, address, and image url
-		restaurantInfo = [{'name':restaurant_name, 'address':restaurant_address, 'image':imageURL}]
+		restaurantInfo = {'name':restaurant_name, 'address':restaurant_address, 'image':imageURL}
 		print "Restaurant Name: %s" % restaurantInfo['name']
 		print "Restaurant Address: %s" % restaurantInfo['address']
 		print "Image: %s \n" % restaurantInfo['image']
