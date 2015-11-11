@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 #GET REQUEST
 
-@app.route('/getHello')
+@app.route('/readHello')
 def getRequestHello():
 	return "Hi, I got your GET Request!"
 
 #POST REQUEST
-@app.route('/postHello', methods = ['POST'])
+@app.route('/createHello', methods = ['POST'])
 def postRequestHello():
 	return "I see you sent a POST message :-)"
 #UPDATE REQUEST
