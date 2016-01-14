@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 #Make an app.route() decorator here for when the client sends the URI "/puppies"
 @app.route('/puppies')
-def puppyFunction():
+def puppiesFunction():
   return "Yes, puppies!"
   
  
 #Make another app.route() decorator here that takes in an integer named 'id' for when the client visits a URI like "/puppies/5"
 @app.route('/puppies/<int:id>')
-def puppiesFunction(id):
+def puppiesFunctionId(id):
   return "This method will act on the puppy with id %s" % id
 
 if __name__ == '__main__':
