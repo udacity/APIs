@@ -16,9 +16,9 @@ class Puppy(Base):
     def serialize(self):
        """Return object data in easily serializeable format"""
        return {
-       		'id': self.id,
-           'name': self.name,
-           'description' : self.description
+       	    'id': self.id,
+       	    'name': self.name,
+       	    'description' : self.description
        }
  
 
