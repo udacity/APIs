@@ -53,7 +53,6 @@ def new_user():
 def get_user(id):
     user = session.query(User).filter_by(id=id).one()
     if not user:
-        print " In here!"
         abort(400)
     return jsonify({'username': user.username})
 
