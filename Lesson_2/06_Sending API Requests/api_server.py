@@ -3,7 +3,6 @@ from flask import Flask
 app = Flask(__name__)
 
 #GET REQUEST
-
 @app.route('/readHello')
 def getRequestHello():
 	return "Hi, I got your GET Request!"
@@ -12,6 +11,7 @@ def getRequestHello():
 @app.route('/createHello', methods = ['POST'])
 def postRequestHello():
 	return "I see you sent a POST message :-)"
+
 #UPDATE REQUEST
 @app.route('/updateHello', methods = ['PUT'])
 def updateRequestHello():
