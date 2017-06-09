@@ -11,7 +11,7 @@ def puppiesFunction():
   
   elif request.method == 'POST':
   	#Call the method to make a new puppy
-  	return makeANewPuppy()
+  	return makeANewPuppy(), 301
   
  
 #Make another app.route() decorator here that takes in an integer id in the 
@@ -22,10 +22,10 @@ def puppiesFunctionId(id):
   	return getPuppy(id)
   if request.method == 'PUT':
   	#Call the method to update a puppy
-  	return updatePuppy(id)
+  	return updatePuppy(id), 301
   elif request.method == 'DELETE':
   	#Call the method to remove a puppy
-  	return deletePuppy(id) 
+  	return deletePuppy(id), 301 
 
 
 def getAllPuppies():
