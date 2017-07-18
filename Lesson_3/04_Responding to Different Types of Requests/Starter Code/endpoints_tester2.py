@@ -28,7 +28,7 @@ try:
 	url = address + "/puppies"
 	h = httplib2.Http()
 	resp, result = h.request(url, 'POST')
-	if resp['status'] != '301':
+	if resp['status'] != '200':
 		raise Exception('Received an unsuccessful status code of %s' % resp['status'])
 
 except Exception as err:
@@ -70,7 +70,7 @@ try:
 		url = address + "/puppies/%s" % id 
 		h = httplib2.Http()
 		resp, result = h.request(url, 'PUT')
-		if resp['status'] != '301':
+		if resp['status'] != '200':
 			raise Exception('Received an unsuccessful status code of %s' % resp['status'])
 		id = id + 1
 
@@ -92,7 +92,7 @@ try:
 		url = address + "/puppies/%s" % id 
 		h = httplib2.Http()
 		resp, result = h.request(url, 'DELETE')
-		if resp['status'] != '301':
+		if resp['status'] != '200':
 			raise Exception('Received an unsuccessful status code of %s' % resp['status'])
 		id = id + 1
 
