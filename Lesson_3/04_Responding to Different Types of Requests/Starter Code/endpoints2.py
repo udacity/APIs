@@ -1,6 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
-# Create the appropriate app.route functions, test and see if they work, and paste your URI’s in the boxes below.
+# Create the appropriate app.route functions, test and see if they work, and paste your URIs in the boxes below.
 
 #Make an app.route() decorator here
 
