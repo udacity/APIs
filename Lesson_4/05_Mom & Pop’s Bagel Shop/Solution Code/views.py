@@ -23,7 +23,7 @@ def verify_password(username, password):
         print "User not found"
         return False
     elif not user.verify_password(password):
-        print "Unable to verfy password"
+        print "Unable to verify password"
         return False
     else:
         g.user = user
