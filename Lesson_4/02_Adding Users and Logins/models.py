@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Create a users database containing a User model."""
 
 from sqlalchemy import Column, Integer, String
