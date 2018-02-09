@@ -4,6 +4,10 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
+
+# Passlib is dedicated to password hashing
+# custom_app_context is an easy to use option
+# base on the SHA256 hashing algorithm
 from passlib.apps import custom_app_context as pwd_context
 
 Base = declarative_base()
@@ -15,6 +19,11 @@ class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
     username = Column(String(32), index=True)
+
+    # The hash of the user's password so passlib can verify a password by:
+    # 1. hashing it with the same function that was used during registration
+    # 2. compare the resulting hash against this one, stored in the database
+    # Thanks to this system, we never have to store a password in the database
     password_hash = Column(String(64))
 
     def hash_password(self, password):
