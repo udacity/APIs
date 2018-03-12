@@ -2,6 +2,16 @@
 
 Udacity course [Designing RESTful APIs](https://www.udacity.com/course/designing-restful-apis--ud388)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Introduction](#introduction)
+- [Course lessons](#course-lessons)
+- [Course materials](#course-materials)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Introduction
 
@@ -101,3 +111,5 @@ Change into the Vagrant directory:
 ```bash
 vagrant@vagrant:~$ cd /vagrant
 ```
+
+[(back to top)](#top)
