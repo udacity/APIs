@@ -37,19 +37,26 @@ This code base was meant to supplement the Udacity course for designing RESTful 
 This course uses the Google Maps and Foursquare APIs. You will need to create developer accounts and private keys in order to properly use code snippets that rely on these APIs.
 
 
-## Python Libraries
+### Python modules
 
-The code in this repository assumes the following python libraries are installed:
+To see a list of locally installed Python modules from the command line:
 
-* Flask
-* SQLAlchemy
-* httplib
-* requests
-* oauth2client
-* redis
-* passlib
-* itsdangerous
-* flask-httpauth
+```text
+python
+>>> help('modules')
+```
+
+The code in this repository assumes the following Python modules are installed:
+
+* `flask`
+* `flask-httpauth`
+* `httplib`
+* `itsdangerous`
+* `oauth2client`
+* `passlib`
+* `redis`
+* `requests`
+* `sqlalchemy`
 
 
 ## Installing Redis
