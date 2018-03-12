@@ -1,5 +1,9 @@
 # APIs
 
+<a href="https://www.udacity.com/">
+	<img src="https://s3-us-west-1.amazonaws.com/udacity-content/rebrand/svg/logo.min.svg" width="300" alt="Udacity logo svg">
+</a>
+
 Udacity course [Designing RESTful APIs](https://www.udacity.com/course/designing-restful-apis--ud388)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
