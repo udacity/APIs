@@ -57,13 +57,3 @@ The code in this repository assumes the following Python modules are installed:
 * `redis`
 * `requests`
 * `sqlalchemy`
-
-
-## Installing Redis
-
-```bash
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make install
-```
