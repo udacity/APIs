@@ -57,3 +57,47 @@ The code in this repository assumes the following Python modules are installed:
 * `redis`
 * `requests`
 * `sqlalchemy`
+
+
+### Optional virtual machine
+
+A virtual machine can be used to run the lesson from an operating system with a defined configuration. The virtual machine has all the Python modules listed above.
+
+
+#### Installing the virtual machine
+
+* *Oracle [VirtualBox](https://www.virtualbox.org/wiki/Downloads) Version 5.2.6 r120293 (Qt5.6.3)* - Software that runs special containers called  virtual machines, like Vagrant.
+* *[Vagrant](https://www.vagrantup.com/) 2.0.1 with Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-75-generic i686)* -  Software that provides the Linux operating system in a defined configuration, allowing it to run identically across many personal computers. Linux can then be run as a virtual machine with VirtualBox.
+* *[Udacity Virtual Machine configuration](https://github.com/udacity/fullstack-nanodegree-vm)* - Repository from Udacity that configures Vagrant.
+	- Instructions are provided [here](https://www.udacity.com/wiki/ud388/vagrant).
+	- Install and run Vagrant from within the directory *fullstack-nanodegree-vm/vagrant*.
+	- Fork and clone the lesson repository into */vagrant/*.
+
+
+#### Running the virtual machine
+
+On the Linux command line:
+
+Change into the Vagrant directory (wherever you have it stored):
+
+```bash
+$ cd <path>/fullstack-nanodegree-vm/vagrant
+```
+
+Start Vagrant (only necessary after computer restart):
+
+```bash
+$ vagrant up
+```
+
+Log in to Ubuntu:
+
+```bash
+$ vagrant ssh
+```
+
+Change into the Vagrant directory:
+
+```bash
+vagrant@vagrant:~$ cd /vagrant
+```
