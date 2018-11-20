@@ -61,5 +61,5 @@ if __name__ == '__main__':
 	findARestaurant("Cappuccino", "Geneva, Switzerland")
 	findARestaurant("Sushi", "Los Angeles, California")
 	findARestaurant("Steak", "La Paz, Bolivia")
-	findARestaurant("Gyros", "Sydney Australia")
+	findARestaurant("Gyros", "Sydney, Australia")
 
