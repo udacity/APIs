@@ -8,7 +8,7 @@ class Puppy(Base):
     __tablename__ = 'puppy'
 
 
-    name =Column(String(80), nullable = False)
+    name = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
     description = Column(String(250))
 
