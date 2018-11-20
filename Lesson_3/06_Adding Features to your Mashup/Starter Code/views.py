@@ -19,7 +19,7 @@ sys.stderr = codecs.getwriter('utf8')(sys.stderr)
 
 #google_api_key = ''
 
-engine = create_engine('sqlite:///restaruants.db')
+engine = create_engine('sqlite:///restaurants.db')
 
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
