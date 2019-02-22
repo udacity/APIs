@@ -129,6 +129,6 @@ except Exception as err:
 	print err.args
 	sys.exit()
 else:
-	print "Test 5 PASS: Succesfully updated first restaurant"
+	print "Test 5 PASS: Could not delete restaurant from server"
 	print "ALL TESTS PASSED!"
 
