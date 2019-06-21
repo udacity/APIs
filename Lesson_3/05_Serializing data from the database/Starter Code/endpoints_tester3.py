@@ -12,7 +12,7 @@ if address == '':
 #Making a POST Request
 print "Making a POST request to /puppies..."
 try:
-	url = address + "/puppies?name=Fido&description=Playful+Little+Puppy"
+	url = address + "/puppies/?name=Fido&description=Playful+Little+Puppy"
 	h = httplib2.Http()
 	resp, result = h.request(url, 'POST')
 	obj = json.loads(result)
