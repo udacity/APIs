@@ -34,7 +34,7 @@ try:
 	resp, result = h.request(url,'POST')
 	if resp['status'] != '200':
 		raise Exception('Received an unsuccessful status code of %s' % resp['status'])
-	print json.loads(result).iteritems()
+	print json.loads(result)
 
 	url = address + '/restaurants?location=Shanghai+China&mealType=Sandwiches'
 	h = httplib2.Http()
