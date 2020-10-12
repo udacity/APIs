@@ -85,7 +85,7 @@ def showCategoriedProducts(category):
         return jsonify(legume_products = [l.serialize for l in legume_items])
     if category == 'vegetable':
         vegetable_items = session.query(Product).filter_by(category = 'vegetable').all()
-        return jsonify(produce_products = [p.serialize for p in produce_items])
+        return jsonify(vegetable_products = [v.serialize for v in vegetable_items])
     
 
 
