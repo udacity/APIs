@@ -1,7 +1,7 @@
 #THIS IS A WEBSERVER FOR DEMONSTRATING THE TYPES OF RESPONSES WE SEE FROM AN API ENDPOINT
 from flask import Flask
 app = Flask(__name__)
-
+ 
 #GET REQUEST
 
 @app.route('/readHello')
